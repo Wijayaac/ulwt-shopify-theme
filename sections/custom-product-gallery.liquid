@@ -6,3 +6,17 @@
     {%- endfor -%}
   </div>
 {% endif %}
+
+{% schema %}
+{
+  "name": "custom product gallery",
+  "class": "section",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product Selection"
+    }
+  ]
+}
+{% endschema %}
