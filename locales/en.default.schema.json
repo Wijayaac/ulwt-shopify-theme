@@ -2816,6 +2816,17 @@
         "name": "Email signup banner"
       }
     },
+    "custom-page": {
+      "name": "Page",
+      "settings": {
+        "page": {
+          "label": "Page"
+        }
+      },
+      "presets": {
+        "name": "Page"
+      }
+    },
     "page": {
       "name": "Page",
       "settings": {
