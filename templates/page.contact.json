@@ -18,7 +18,7 @@
       }
     },
     "b2936641-8d8f-4a47-bba7-89e5a64b13c2": {
-      "type": "page",
+      "type": "custom-page",
       "settings": {
         "page": "custom-page",
         "heading_size": "h1",
