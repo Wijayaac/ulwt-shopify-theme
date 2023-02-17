@@ -1,0 +1,8 @@
+{% if product.metafields.custom.gallery.value != blank %}
+  <div class="page-width">
+    <h2>Gallery (source)</h2>
+    {%- for item in product.metafields.custom.gallery.value -%}
+      <p>{{ item }}</p>
+    {%- endfor -%}
+  </div>
+{% endif %}
