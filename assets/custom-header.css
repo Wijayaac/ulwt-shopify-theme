@@ -1,9 +1,13 @@
 .header-wrapper {
-    background-color: transparent;
     position: absolute;
     top: 0;
     width: 100%;
     z-index: 999;
+    padding: 10px 0;
+}
+
+.header-wrapper.header-wrapper--ulwt {
+    background-color: transparent;
 }
 
 .scrolled-past-header .header-wrapper {
@@ -27,6 +31,9 @@
 .cheader__heading span {
     font-weight: 700;
     text-transform: uppercase;
+}
+
+.header-wrapper--ulwt .cheader__heading span {
     color: white;
 }
 
@@ -55,6 +62,9 @@
 .cheader__icons svg {
     width: 20px;
     height: 20px;
+}
+
+.header-wrapper--ulwt .cheader__icons svg {
     color: white;
 }
 
@@ -68,6 +78,7 @@
 
 .cheader__icons .cheader__icon--cart {
     line-height: 0;
+    position: relative;
 }
 
 .cheader__icons .cheader__icon--cart svg {
@@ -80,7 +91,7 @@
     margin-right: 25px;
 }
 
-.list-menu--inline li a {
+.header-wrapper--ulwt .list-menu--inline li a {
     color: white;
 }
 
