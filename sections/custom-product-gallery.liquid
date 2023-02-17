@@ -1,9 +1,37 @@
+<style>
+  .gallery__image {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
 {% if product.metafields.custom.gallery.value != blank %}
   <div class="page-width">
     <h2>Gallery (source)</h2>
-    {%- for item in product.metafields.custom.gallery.value -%}
-      <p>{{ item }}</p>
-    {%- endfor -%}
+    {% unless section.settings.product == blank %}
+      {% assign product = all_products[section.settings.product] %}
+      {% if product %}
+        {%- for item in product.metafields.custom.gallery.value -%}
+          <p>{{ item }}</p>
+          {%- liquid
+            assign item_height = item.width | divided_by: item.aspect_ratio
+            assign sizes = '100vw'
+          -%}
+          {{
+            item
+            | image_url: width: 720
+            | image_tag:
+              loading: 'lazy',
+              width: item.width,
+              height: item_height,
+              class: 'gallery__image',
+              sizes: sizes,
+              widths: '375, 550, 750, 1100, 1500'
+          }}
+        {%- endfor -%}
+      {% else %}
+        No product, or invalid product, selected.
+      {% endif %}
+    {% endunless %}
   </div>
 {% endif %}
 
