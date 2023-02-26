@@ -1,0 +1,165 @@
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+edge-section {
+    --spacing: 0;
+    display: block;
+}
+
+edge-section.edge-tm-dark-blue {
+    color: #f7f7f7;
+    background-color: #00003d;
+}
+
+edge-section.edge-tm-light-gray {
+    color: #00003d;
+    background-color: #f7f7f7;
+}
+
+edge-section.edge-tm-light-blue {
+    color: #f7f7f7;
+    background-color: #2e4552;
+}
+
+.edge-tm {
+    max-width: 1340px;
+    min-height: 600px;
+}
+
+[data-edge="left"] .edge-tm {
+    margin-right: var(--spacing);
+    margin-left: auto;
+}
+
+[data-edge="right"] .edge-tm {
+    margin-left: var(--spacing);
+    margin-right: auto;
+}
+
+@media (max-width: 61.99em) {
+
+    [data-edge="left"] .edge-tm,
+    [data-edge="right"] .edge-tm {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+[data-edge="left"] .edge-tm-wrapper {
+    flex-direction: row-reverse;
+}
+
+[data-edge="right"] .edge-tm-wrapper {
+    flex-direction: row;
+}
+
+@media (max-width: 61.99em) {
+    .edge-tm-wrapper {
+        flex-direction: column !important;
+    }
+}
+
+.edge-tm-media,
+.edge-tm-content {
+    max-width: 50%;
+    flex: 0 0 50%;
+}
+
+@media (max-width: 61.99em) {
+
+    .edge-tm-media,
+    .edge-tm-content {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+}
+
+.edge-tm-content {
+    padding: 40px 30px;
+}
+
+@media (min-width: 48em) {
+    .edge-tm-content {
+        padding: 0 0 0 60px;
+    }
+}
+
+.edge-tm-media {
+    background-color: #a6a8ab;
+    padding-top: 60%;
+    position: relative;
+}
+
+.edge-tm-media img,
+.edge-tm-media svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    inset: 0;
+}
+
+@media (max-width: 47.99em) {
+    .edge-tm-media {
+        padding-top: 90%;
+    }
+}
+
+@media (min-width: 48em) {
+    .edge-tm-text {
+        height: 100%;
+        padding-right: 90px;
+    }
+}
+
+.edge-tm-text p,
+.edge-tm-text .edge-tm-title {
+    color: inherit;
+}
+
+@media (min-width: 48em) {
+    .edge-tm-text h1 {
+        margin-bottom: 17px;
+    }
+
+    .edge-tm-subheading {
+        margin-bottom: 20px;
+    }
+}
+
+.edge-tm-description {
+    margin-bottom: 15px;
+}
+
+@media (min-width: 48em) {
+    .edge-tm-description {
+        margin-bottom: 30px;
+    }
+}
+
+.edge-tm-button {
+    flex-wrap: wrap;
+}
+
+.edge-tm-button .button:first-child {
+    margin-bottom: 17px;
+}
+
+@media (min-width: 48em) {
+    .edge-tm-button .button:first-child {
+        margin-bottom: 17px;
+        margin-right: 17px;
+    }
+}
+
+/*# sourceMappingURL=index.9b346548.css.map */
