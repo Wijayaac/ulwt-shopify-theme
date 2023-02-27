@@ -194,31 +194,49 @@
         "padding_bottom": 36
       }
     },
-    "section_edge_text_image": {
+    "86931ae2-0613-445b-abcb-f4e150f3a7aa": {
       "type": "edge-text-media",
       "blocks": {
-        "heading_label": {
+        "template--17893775606055__86931ae2-0613-445b-abcb-f4e150f3a7aa-1677456801570d9cd6-0": {
           "type": "heading",
           "settings": {
-            "heading": "Multimedia collage",
-            "heading_tag": "h2"
+            "heading": "heartbeatz",
+            "heading_tag": "h1"
           }
         },
-        "subheading": {
+        "template--17893775606055__86931ae2-0613-445b-abcb-f4e150f3a7aa-1677456801570d9cd6-1": {
           "type": "subheading",
           "settings": {
-            "subheading": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam ullam distinctio quod voluptatibus magni eligendi non corrupti aperiam aliquam illum."
+            "subheading": "Lorem ipsum dolor sit."
+          }
+        },
+        "59efe902-c5cb-4fb0-9d9e-2c12515f7584": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A distinctio cumque rerum voluptates numquam provident deserunt aliquam animi earum sequi.<\/p>"
+          }
+        },
+        "template--17893775606055__86931ae2-0613-445b-abcb-f4e150f3a7aa-1677456801570d9cd6-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Label Here",
+            "button_link_1": "shopify:\/\/collections",
+            "button_label_2": "Label Here",
+            "button_link_2": "shopify:\/\/products\/the-3p-fulfilled-snowboard"
           }
         }
       },
       "block_order": [
-        "heading_label",
-        "subheading"
+        "template--17893775606055__86931ae2-0613-445b-abcb-f4e150f3a7aa-1677456801570d9cd6-0",
+        "template--17893775606055__86931ae2-0613-445b-abcb-f4e150f3a7aa-1677456801570d9cd6-1",
+        "59efe902-c5cb-4fb0-9d9e-2c12515f7584",
+        "template--17893775606055__86931ae2-0613-445b-abcb-f4e150f3a7aa-1677456801570d9cd6-2"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/home-showcase-2.jpg",
         "image_position": "right",
         "margin_bottom": 0,
-        "background_color": "light-gray"
+        "background_color": "dark_blue"
       }
     }
   },
@@ -229,6 +247,6 @@
     "collage",
     "video",
     "multicolumn",
-    "section_edge_text_image"
+    "86931ae2-0613-445b-abcb-f4e150f3a7aa"
   ]
 }
