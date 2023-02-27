@@ -126,6 +126,7 @@
     {
       "name": "Heading",
       "type": "heading",
+      "limit": 1,
       "settings": [
         {
           "type": "text",
@@ -158,17 +159,20 @@
     {
       "name": "Description",
       "type": "description",
+      "limit": 1,
       "settings": [
         {
           "type": "richtext",
           "id": "description",
-          "label": "Description"
+          "label": "Description",
+          "default": "Give customers details about the image or content on the template."
         }
       ]
     },
     {
       "name": "Subheading",
       "type": "subheading",
+      "limit": 1,
       "settings": [
         {
           "type": "textarea",
@@ -181,6 +185,7 @@
     {
       "name": "Buttons",
       "type": "buttons",
+      "limit": 1,
       "settings": [
         {
           "type": "text",
@@ -216,6 +221,9 @@
         },
         {
           "type": "subheading"
+        },
+        {
+          "type": "description"
         },
         {
           "type": "buttons"
