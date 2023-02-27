@@ -15,18 +15,18 @@
               {%- when 'subheading' -%}
                 <p class="edge-tm-subheading h3">{{ block.settings.subheading }}</p>
               {%- when 'description' -%}
-                <div class="edge-tm-description">{{ block.settings.description | metafield_tag }}</div>
+                <div class="edge-tm-description">{{ block.settings.description }}</div>
               {%- when 'buttons' -%}
                 <div class="edge-tm-button flex">
-                  {% for key in block.settings.buttons %}
+                  {% for key in block.settings %}
                     {% if key == 'button_label_1' %}
-                      <a href="{{ block.settings.buttons.button_link_1 }}" class="button">
-                        {{- block.settings.buttons.button_label_1 -}}
+                      <a href="{{ block.settings.button_link_1 }}" class="button">
+                        {{- block.settings.button_label_1 -}}
                       </a>
                     {% endif %}
                     {% if key == 'button_label_2' %}
-                      <a href="{{ block.settings.buttons.button_link_2 }}" class="button">
-                        {{- block.settings.buttons.button_label_2 -}}
+                      <a href="{{ block.settings.button_link_2 }}" class="button">
+                        {{- block.settings.button_label_2 -}}
                       </a>
                     {% endif %}
                   {% endfor %}
@@ -107,19 +107,19 @@
       "label": "Background Color",
       "options": [
         {
-          "value": "light_gray",
+          "value": "light-gray",
           "label": "Light Gray"
         },
         {
-          "value": "ligth_blue",
+          "value": "ligth-blue",
           "label": "Ligth Blue"
         },
         {
-          "value": "dark_blue",
+          "value": "dark-blue",
           "label": "Dark Blue"
         }
       ],
-      "default": "dark_blue"
+      "default": "dark-blue"
     }
   ],
   "blocks": [
@@ -225,28 +225,3 @@
   ]
 }
 {% endschema %}
-
-{% comment %}
-  <script locals>
-      module.exports = {
-          settings: {
-              // content
-              heading: "heartbeatz", // text
-              heading_tag: "h1", // options
-              image: "/src/images/product-heartbeatz.jpg", // image_picker
-              subheading: "Apple Watch heart rate monitoring, included with every NPE product.", // text
-              description: "<p>heartbeatz technology <strong>allows</strong> you to effortlessly use your Apple Watch as a standard ANT+ or Bluetooth heart rate monitor with any fitness app or equipment.</p>", // richtext
-              buttons: { // custom blocks type buttons
-                  button_label_1: "Shop Home Fitness", // text
-                  button_link_1: "#", // url
-                  button_label_2: "Shop Commercial Fitness", //text
-                  button_link_2: "#", // url
-              },
-              // variation
-              image_position: "right", //radio: left , right
-              margin_bottom: 0, //range -100 ~ 100 step 20
-              background_color: "dark-blue" //options: light-gray, light-blue, dark-blue
-          }
-      }
-  </script>
-{% endcomment %}

@@ -236,7 +236,7 @@
         "image": "shopify:\/\/shop_images\/home-showcase-2.jpg",
         "image_position": "right",
         "margin_bottom": 0,
-        "background_color": "dark_blue"
+        "background_color": "dark-blue"
       }
     }
   },
