@@ -10,7 +10,6 @@ class EdgeSection extends HTMLElement {
     resizeObserver.observe(this);
   }
   setSpace() {
-    console.log("here", this.containerElement);
     let space =
       this.containerElement.getBoundingClientRect().left ||
       this.containerElement.offsetLeft;
