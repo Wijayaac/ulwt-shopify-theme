@@ -1,20 +1,20 @@
 {
   "sections": {
-    "custom_hero_banner": {
-      "type": "custom-hero-banner",
+    "image_banner": {
+      "type": "image-banner",
       "blocks": {
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "All discount in this store up to 30%",
-            "text_style": "body"
-          }
-        },
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Welcome to the store",
+            "heading": "Image banner",
             "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
           }
         },
         "button": {
@@ -30,12 +30,11 @@
         }
       },
       "block_order": [
-        "text",
         "heading",
+        "text",
         "button"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/rack-of-womens-clothing.jpg",
         "image_overlay_opacity": 40,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
@@ -55,198 +54,28 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "selected-collection",
+        "collection": "all",
         "products_to_show": 8,
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "full_width": false,
-        "show_view_all": false,
+        "show_view_all": true,
         "view_all_style": "solid",
-        "enable_desktop_slider": true,
+        "enable_desktop_slider": false,
         "color_scheme": "background-1",
         "image_ratio": "adapt",
         "show_secondary_image": true,
         "show_vendor": false,
-        "show_rating": true,
+        "show_rating": false,
         "enable_quick_add": false,
         "columns_mobile": "2",
-        "swipe_on_mobile": true,
+        "swipe_on_mobile": false,
         "padding_top": 28,
         "padding_bottom": 36
-      }
-    },
-    "101c0c93-e674-44f2-ba90-239693424452": {
-      "type": "custom-hero-banner",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/rack-of-womens-clothing.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
-    },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "86931ae2-0613-445b-abcb-f4e150f3a7aa": {
-      "type": "edge-text-media",
-      "blocks": {
-        "template--17893775606055__86931ae2-0613-445b-abcb-f4e150f3a7aa-1677456801570d9cd6-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "heartbeatz",
-            "heading_tag": "h1"
-          }
-        },
-        "template--17893775606055__86931ae2-0613-445b-abcb-f4e150f3a7aa-1677456801570d9cd6-1": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "Lorem ipsum dolor sit."
-          }
-        },
-        "59efe902-c5cb-4fb0-9d9e-2c12515f7584": {
-          "type": "description",
-          "settings": {
-            "description": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A distinctio cumque rerum voluptates numquam provident deserunt aliquam animi earum sequi.<\/p>"
-          }
-        },
-        "template--17893775606055__86931ae2-0613-445b-abcb-f4e150f3a7aa-1677456801570d9cd6-2": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Label Here",
-            "button_link_1": "shopify:\/\/collections",
-            "button_label_2": "Label Here",
-            "button_link_2": "shopify:\/\/products\/the-3p-fulfilled-snowboard"
-          }
-        }
-      },
-      "block_order": [
-        "template--17893775606055__86931ae2-0613-445b-abcb-f4e150f3a7aa-1677456801570d9cd6-0",
-        "template--17893775606055__86931ae2-0613-445b-abcb-f4e150f3a7aa-1677456801570d9cd6-1",
-        "59efe902-c5cb-4fb0-9d9e-2c12515f7584",
-        "template--17893775606055__86931ae2-0613-445b-abcb-f4e150f3a7aa-1677456801570d9cd6-2"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/home-showcase-2.jpg",
-        "image_position": "right",
-        "margin_bottom": 0,
-        "background_color": "dark-blue"
       }
     }
   },
   "order": [
-    "custom_hero_banner",
-    "featured_collection",
-    "101c0c93-e674-44f2-ba90-239693424452",
-    "collage",
-    "video",
-    "multicolumn",
-    "86931ae2-0613-445b-abcb-f4e150f3a7aa"
+    "image_banner",
+    "featured_collection"
   ]
 }
