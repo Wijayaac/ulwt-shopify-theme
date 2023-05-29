@@ -1,5 +1,15 @@
 {
   "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "settings": {
+      }
+    },
+    "shogun-above": {
+      "type": "shogun-above",
+      "settings": {
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -100,6 +110,11 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "beb90bf1-7ccc-42a9-89a8-cf8546c31447": {
+          "type": "shopify:\/\/apps\/appstle-subscriptions\/blocks\/appstle-subscription-product-page-widget\/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -116,7 +131,8 @@
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
-        "share"
+        "share",
+        "beb90bf1-7ccc-42a9-89a8-cf8546c31447"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -220,6 +236,7 @@
     "product-feature": {
       "type": "product-feature",
       "settings": {
+        "feature_limit": 3,
         "title": "",
         "heading_size": "h1",
         "image_width": "full",
@@ -253,18 +270,8 @@
         "padding_bottom": 28
       }
     },
-    "shogun-above": {
-      "type": "shogun-above",
-      "settings": {
-      }
-    },
     "shogun-below": {
       "type": "shogun-below",
-      "settings": {
-      }
-    },
-    "shogun-helper": {
-      "type": "shogun-helper",
       "settings": {
       }
     }
