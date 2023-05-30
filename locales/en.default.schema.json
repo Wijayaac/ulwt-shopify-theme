@@ -386,6 +386,18 @@
   },
   "sections": {
     "all": {
+      "animation": {
+        "content": "Animations",
+        "image_behavior": {
+          "options__1": {
+            "label": "None"
+          },
+          "options__2": {
+            "label": "Ambient movement"
+          },
+          "label": "Image behavior"
+        }
+      },
       "padding": {
         "section_padding_heading": "Section padding",
         "padding_top": "Top padding",
@@ -815,6 +827,10 @@
             "show_dynamic_checkout": {
               "label": "Show dynamic checkout buttons",
               "info": "Using the payment methods available on your store, customers see their preferred option, like PayPal or Apple Pay. [Learn more](https:\/\/help.shopify.com\/manual\/using-themes\/change-the-layout\/dynamic-checkout)"
+            },
+            "show_gift_card_recipient": {
+              "label": "Show recipient form for gift card products",
+              "info": "When enabled, gift card products can optionally be sent to a recipient with a personal message."
             }
           }
         },
@@ -1036,6 +1052,9 @@
           },
           "options__2": {
             "label": "Mega menu"
+          },
+          "options__3": {
+            "label": "Drawer"
           }
         },
         "show_line_separator": {
@@ -1055,6 +1074,24 @@
           "options__4": {
             "label": "Always, reduce logo size"
           }
+        },
+        "header__3": {
+          "content": "Country\/region selector"
+        },
+        "header__4": {
+          "info": "To add a country\/region, go to your [market settings.](\/admin\/settings\/markets)"
+        },
+        "enable_country_selector": {
+          "label": "Enable country\/region selector"
+        },
+        "header__5": {
+          "content": "Language selector"
+        },
+        "header__6": {
+          "info": "To add a language, go to your [language settings.](\/admin\/settings\/languages)"
+        },
+        "enable_language_selector": {
+          "label": "Enable language selector"
         },
         "margin_bottom": {
           "label": "Bottom margin"
@@ -1149,7 +1186,7 @@
         "color_scheme": {
           "info": "Visible when container displayed."
         },
-        "header": {
+        "mobile": {
           "content": "Mobile Layout"
         },
         "mobile_content_alignment": {
@@ -1232,167 +1269,6 @@
       },
       "presets": {
         "name": "Image banner"
-      }
-    },
-    "custom-hero-banner": {
-      "name": "Custom Hero banner",
-      "settings": {
-        "image": {
-          "label": "First image"
-        },
-        "image_2": {
-          "label": "Second image"
-        },
-        "image_overlay_opacity": {
-          "label": "Image overlay opacity"
-        },
-        "image_height": {
-          "label": "Banner height",
-          "options__1": {
-            "label": "Adapt to first image"
-          },
-          "options__2": {
-            "label": "Small"
-          },
-          "options__3": {
-            "label": "Medium"
-          },
-          "options__4": {
-            "label": "Large"
-          },
-          "info": "For best results, use an image with a 3:2 aspect ratio. [Learn more](https:\/\/help.shopify.com\/manual\/shopify-admin\/productivity-tools\/image-editor#understanding-image-aspect-ratio)"
-        },
-        "desktop_content_position": {
-          "options__1": {
-            "label": "Top Left"
-          },
-          "options__2": {
-            "label": "Top Center"
-          },
-          "options__3": {
-            "label": "Top Right"
-          },
-          "options__4": {
-            "label": "Middle Left"
-          },
-          "options__5": {
-            "label": "Middle Center"
-          },
-          "options__6": {
-            "label": "Middle Right"
-          },
-          "options__7": {
-            "label": "Bottom Left"
-          },
-          "options__8": {
-            "label": "Bottom Center"
-          },
-          "options__9": {
-            "label": "Bottom Right"
-          },
-          "label": "Desktop content position"
-        },
-        "show_text_box": {
-          "label": "Show container on desktop"
-        },
-        "desktop_content_alignment": {
-          "options__1": {
-            "label": "Left"
-          },
-          "options__2": {
-            "label": "Center"
-          },
-          "options__3": {
-            "label": "Right"
-          },
-          "label": "Desktop content alignment"
-        },
-        "color_scheme": {
-          "info": "Visible when container displayed."
-        },
-        "header": {
-          "content": "Mobile Layout"
-        },
-        "mobile_content_alignment": {
-          "options__1": {
-            "label": "Left"
-          },
-          "options__2": {
-            "label": "Center"
-          },
-          "options__3": {
-            "label": "Right"
-          },
-          "label": "Mobile content alignment"
-        },
-        "stack_images_on_mobile": {
-          "label": "Stack images on mobile"
-        },
-        "show_text_below": {
-          "label": "Show container on mobile"
-        },
-        "adapt_height_first_image": {
-          "label": "Adapt section height to first image size",
-          "info": "Overwrites image banner height setting when checked."
-        }
-      },
-      "blocks": {
-        "heading": {
-          "name": "Heading",
-          "settings": {
-            "heading": {
-              "label": "Heading"
-            }
-          }
-        },
-        "text": {
-          "name": "Text",
-          "settings": {
-            "text": {
-              "label": "Description"
-            },
-            "text_style": {
-              "options__1": {
-                "label": "Body"
-              },
-              "options__2": {
-                "label": "Subtitle"
-              },
-              "options__3": {
-                "label": "Uppercase"
-              },
-              "label": "Text style"
-            }
-          }
-        },
-        "buttons": {
-          "name": "Buttons",
-          "settings": {
-            "button_label_1": {
-              "label": "First button label",
-              "info": "Leave the label blank to hide the button."
-            },
-            "button_link_1": {
-              "label": "First button link"
-            },
-            "button_style_secondary_1": {
-              "label": "Use outline button style"
-            },
-            "button_label_2": {
-              "label": "Second button label",
-              "info": "Leave the label blank to hide the button."
-            },
-            "button_link_2": {
-              "label": "Second button link"
-            },
-            "button_style_secondary_2": {
-              "label": "Use outline button style"
-            }
-          }
-        }
-      },
-      "presets": {
-        "name": "Custom hero banner"
       }
     },
     "image-with-text": {
@@ -2083,6 +1959,10 @@
             "show_dynamic_checkout": {
               "label": "Show dynamic checkout buttons",
               "info": "Using the payment methods available on your store, customers see their preferred option, like PayPal or Apple Pay. [Learn more](https:\/\/help.shopify.com\/manual\/using-themes\/change-the-layout\/dynamic-checkout)"
+            },
+            "show_gift_card_recipient": {
+              "label": "Show recipient information form for gift card products",
+              "info": "Gift card products can optionally be sent direct to a recipient along with a personal message."
             }
           }
         },
@@ -2816,17 +2696,6 @@
         "name": "Email signup banner"
       }
     },
-    "custom-page": {
-      "name": "Page",
-      "settings": {
-        "page": {
-          "label": "Page"
-        }
-      },
-      "presets": {
-        "name": "Page"
-      }
-    },
     "page": {
       "name": "Page",
       "settings": {
@@ -2835,7 +2704,7 @@
         }
       },
       "presets": {
-        "name": "Custom page"
+        "name": "Page"
       }
     },
     "related-products": {
@@ -3009,10 +2878,27 @@
         "cover_image": {
           "label": "Cover image"
         },
+        "video": {
+          "label": "Video"
+        },
+        "enable_video_looping": {
+          "label": "Play video on loop"
+        },
+        "header__1": {
+          "content": "Shopify-hosted video"
+        },
+        "header__2": {
+          "content": "Or embed video from URL"
+        },
+        "header__3": {
+          "content": "Style"
+        },
+        "paragraph": {
+          "content": "Shows when no Shopify-hosted video is selected."
+        },
         "video_url": {
           "label": "URL",
-          "placeholder": "Use a YouTube or Vimeo URL",
-          "info": "Video plays in the page."
+          "info": "Use a YouTube or Vimeo URL"
         },
         "description": {
           "label": "Video alt text",

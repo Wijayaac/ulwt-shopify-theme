@@ -1,15 +1,5 @@
 {
   "sections": {
-    "shogun-helper": {
-      "type": "shogun-helper",
-      "settings": {
-      }
-    },
-    "shogun-above": {
-      "type": "shogun-above",
-      "settings": {
-      }
-    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -25,26 +15,9 @@
           "settings": {
           }
         },
-        "caption": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
-          }
-        },
         "price": {
           "type": "price",
           "settings": {
-          }
-        },
-        "3dd4351b-5ade-4234-b3b9-77e78a4498c3": {
-          "type": "shopify:\/\/apps\/product-reviews\/blocks\/star_rating\/bae150af-8da8-48b2-9867-398188115e5f",
-          "settings": {
-            "stars_fill_color": "#000000",
-            "star_size": 15,
-            "text_align": "center",
-            "product": "{{product}}",
-            "stars_text_empty": "No reviews"
           }
         },
         "variant_picker": {
@@ -61,48 +34,13 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
           }
         },
         "description": {
           "type": "description",
           "settings": {
-          }
-        },
-        "collapsible-row-0": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Materials",
-            "icon": "leather",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-1": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Shipping & Returns",
-            "icon": "truck",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-2": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Dimensions",
-            "icon": "ruler",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-3": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Care Instructions",
-            "icon": "heart",
-            "content": "",
-            "page": ""
           }
         },
         "share": {
@@ -120,9 +58,7 @@
       "block_order": [
         "vendor",
         "title",
-        "caption",
         "price",
-        "3dd4351b-5ade-4234-b3b9-77e78a4498c3",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
@@ -132,7 +68,8 @@
         "collapsible-row-2",
         "collapsible-row-3",
         "share",
-        "beb90bf1-7ccc-42a9-89a8-cf8546c31447"
+        "beb90bf1-7ccc-42a9-89a8-cf8546c31447",
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -270,6 +207,16 @@
         "padding_bottom": 28
       }
     },
+    "shogun-above": {
+      "type": "shogun-above",
+      "settings": {
+      }
+    },
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "settings": {
+      }
+    },
     "shogun-below": {
       "type": "shogun-below",
       "settings": {
@@ -280,11 +227,11 @@
     "shogun-helper",
     "shogun-above",
     "main",
+    "related-products",
     "image-with-text",
     "multicolumn",
     "custom-product-gallery",
     "product-feature",
-    "related-products",
     "shogun-below"
   ]
 }
