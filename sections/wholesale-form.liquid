@@ -14,16 +14,23 @@
   }
 {%- endstyle -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="contact page-width page-width--narrow section-{{ section.id }}-padding">
+<div class="color-{{ section.settings.color_scheme }} gradient isolate page-width wholesale-form">
+  <div class="contact wholesale-form__container section-{{ section.id }}-padding">
     {%- if section.settings.heading != blank -%}
-      <h2 class="title title-wrapper--no-top-margin inline-richtext {{ section.settings.heading_size }}">
-        {{ section.settings.heading }}
+      <h2 class="title title-wrapper--no-top-margin {{ section.settings.heading_size }}">
+        {{ section.settings.heading | escape }}
       </h2>
     {%- else -%}
       <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
     {%- endif -%}
     {%- form 'contact', id: 'WholesaleForm', class: 'isolate' -%}
+      <input
+        class="field__input"
+        type="hidden"
+        id="WholesaleForm-subject"
+        name="contact[subject]"
+        value="wholesale"
+      >
       {%- if form.posted_successfully? -%}
         <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
           {% render 'icon-success' %}
@@ -38,87 +45,140 @@
         </div>
         <ul class="form-status-list caption-large" role="list">
           <li>
-            <a href="#ContactForm-email" class="link">
+            <a href="#WholesaleForm-email" class="link">
               {{ form.errors.translated_fields.email | capitalize }}
               {{ form.errors.messages.email }}
             </a>
           </li>
         </ul>
       {%- endif -%}
-      <div class="contact__fields">
-        <div class="field">
-          <input
-            class="field__input"
-            autocomplete="name"
-            type="text"
-            id="ContactForm-name"
-            name="contact[{{ 'templates.contact.form.name' | t }}]"
-            value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
-            placeholder="{{ 'templates.contact.form.name' | t }}"
-          >
-          <label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label>
-        </div>
-        <div class="field field--with-error">
-          <input
-            autocomplete="email"
-            type="email"
-            id="ContactForm-email"
-            class="field__input"
-            name="contact[email]"
-            spellcheck="false"
-            autocapitalize="off"
-            value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
-            aria-required="true"
-            {% if form.errors contains 'email' %}
-              aria-invalid="true"
-              aria-describedby="ContactForm-email-error"
-            {% endif %}
-            placeholder="{{ 'templates.contact.form.email' | t }}"
-          >
-          <label class="field__label" for="ContactForm-email">
-            {{- 'templates.contact.form.email' | t }}
-            <span aria-hidden="true">*</span></label
-          >
-          {%- if form.errors contains 'email' -%}
-            <small class="contact__field-error" id="ContactForm-email-error">
-              <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
-              <span class="form__message">
-                {%- render 'icon-error' -%}
-                {{- form.errors.translated_fields.email | capitalize }}
-                {{ form.errors.messages.email -}}
-              </span>
-            </small>
-          {%- endif -%}
-        </div>
+      <div class="field">
+        <input
+          class="field__input"
+          autocomplete="name"
+          type="text"
+          id="WholesaleForm-name"
+          name="contact[{{ 'templates.contact.form.name' | t }}]"
+          value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+          placeholder="{{ 'templates.contact.form.name' | t }}"
+          required="required"
+        >
+        <label class="field__label" for="WholesaleForm-name">
+          {{- 'templates.contact.form.name' | t }}
+          <span aria-hidden="true">*</span>
+        </label>
+      </div>
+      <div class="field field--with-error">
+        <input
+          autocomplete="email"
+          type="email"
+          id="WholesaleForm-email"
+          class="field__input"
+          name="contact[email]"
+          spellcheck="false"
+          autocapitalize="off"
+          value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+          aria-required="true"
+          {% if form.errors contains 'email' %}
+            aria-invalid="true"
+            aria-describedby="WholesaleForm-email-error"
+          {% endif %}
+          placeholder="{{ 'templates.contact.form.email' | t }}"
+        >
+        <label class="field__label" for="WholesaleForm-email">
+          {{- 'templates.contact.form.email' | t }}
+          <span aria-hidden="true">*</span></label
+        >
+        {%- if form.errors contains 'email' -%}
+          <small class="contact__field-error" id="WholesaleForm-email-error">
+            <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+            <span class="form__message">
+              {%- render 'icon-error' -%}
+              {{- form.errors.translated_fields.email | capitalize }}
+              {{ form.errors.messages.email -}}
+            </span>
+          </small>
+        {%- endif -%}
       </div>
       <div class="field">
         <input
-          type="tel"
-          id="ContactForm-phone"
           class="field__input"
-          autocomplete="tel"
-          name="contact[{{ 'templates.contact.form.phone' | t }}]"
-          pattern="[0-9\-]*"
-          value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
-          placeholder="{{ 'templates.contact.form.phone' | t }}"
+          autocomplete="company"
+          type="text"
+          id="WholesaleForm-company_name"
+          name="contact[company_name]"
+          value="{% if form.company_name %}{{ form.company_name }}{% endif %}"
+          placeholder="{{ 'templates.contact.form.company_name' | t }}"
+          required="required"
         >
-        <label class="field__label" for="ContactForm-phone">{{ 'templates.contact.form.phone' | t }}</label>
+        <label class="field__label" for="WholesaleForm-company_name">
+          {{- 'templates.contact.form.company_name' | t }}
+          <span aria-hidden="true">*</span>
+        </label>
+      </div>
+      <div class="field">
+        <input
+          class="field__input"
+          autocomplete="address"
+          type="text"
+          id="WholesaleForm-company_address"
+          name="contact[company_address]"
+          value="{% if form.company_address %}{{ form.company_address }}{% endif %}"
+          placeholder="{{ 'templates.contact.form.company_address' | t }}"
+          required="required"
+        >
+        <label class="field__label" for="WholesaleForm-company_address">
+          {{- 'templates.contact.form.company_address' | t }}
+          <span aria-hidden="true">*</span>
+        </label>
+      </div>
+      <div class="field">
+        <input
+          class="field__input field__input--high"
+          autocomplete="license"
+          type="text"
+          id="WholesaleForm-company_license"
+          name="contact[company_license]"
+          value="{% if form.company_license %}{{ form.company_license }}{% endif %}"
+          placeholder="{{ 'templates.contact.form.company_license' | t }}"
+          required="required"
+        >
+        <label class="field__label" for="WholesaleForm-company_license">
+          {{- 'templates.contact.form.company_license' | t }}
+          <span aria-hidden="true">*</span>
+        </label>
+      </div>
+      <div class="field">
+        <input
+          class="field__input"
+          autocomplete="channel"
+          type="text"
+          id="WholesaleForm-sales_channel"
+          name="contact[sales_channel]"
+          value="{% if form.sales_channel %}{{ form.sales_channel }}{% endif %}"
+          placeholder="{{ 'templates.contact.form.sales_channel' | t }}"
+        >
+        <label class="field__label" for="WholesaleForm-sales_channel">
+          {{- 'templates.contact.form.sales_channel' | t }}
+        </label>
       </div>
       <div class="field">
         <textarea
           rows="10"
-          id="ContactForm-body"
+          id="WholesaleForm-body"
           class="text-area field__input"
-          name="contact[{{ 'templates.contact.form.comment' | t }}]"
-          placeholder="{{ 'templates.contact.form.comment' | t }}"
+          required="required"
+          name="contact[body]"
+          placeholder="{{ 'templates.contact.form.message' | t }}"
         >
           {{- form.body -}}
         </textarea>
-        <label class="form__label field__label" for="ContactForm-body">
-          {{- 'templates.contact.form.comment' | t -}}
+        <label class="form__label field__label" for="WholesaleForm-body">
+          {{- 'templates.contact.form.message' | t -}}
+          <span aria-hidden="true">*</span>
         </label>
       </div>
-      <div class="contact__button">
+      <div class="contact__button {% if section.settings.center_alignment %}text-center{% endif %}">
         <button type="submit" class="button">
           {{ 'templates.contact.form.send' | t }}
         </button>
@@ -132,12 +192,9 @@
   "name": "t:sections.contact-form.name",
   "tag": "section",
   "class": "section",
-  "disabled_on": {
-    "groups": ["header", "footer"]
-  },
   "settings": [
     {
-      "type": "inline_richtext",
+      "type": "text",
       "id": "heading",
       "default": "Contact form",
       "label": "Heading"
@@ -161,6 +218,12 @@
       ],
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "center_alignment",
+      "default": true,
+      "label": "Button center alignment"
     },
     {
       "type": "select",
