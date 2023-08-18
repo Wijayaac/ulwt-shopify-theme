@@ -24,13 +24,6 @@
       <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
     {%- endif -%}
     {%- form 'contact', id: 'WholesaleForm', class: 'isolate' -%}
-      <input
-        class="field__input"
-        type="hidden"
-        id="WholesaleForm-subject"
-        name="contact[subject]"
-        value="wholesale"
-      >
       {%- if form.posted_successfully? -%}
         <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
           {% render 'icon-success' %}
@@ -52,6 +45,13 @@
           </li>
         </ul>
       {%- endif -%}
+      <input
+        class="field__input"
+        type="hidden"
+        id="WholesaleForm-subject"
+        name="contact[tag_name]"
+        value="wholesale"
+      >
       <div class="field">
         <input
           class="field__input"
