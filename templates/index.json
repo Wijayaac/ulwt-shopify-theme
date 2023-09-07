@@ -73,29 +73,10 @@
         "padding_top": 28,
         "padding_bottom": 36
       }
-    },
-    "1694126841be786745": {
-      "type": "apps",
-      "blocks": {
-        "0a3c035a-59a4-4354-bef1-8940e618a69d": {
-          "type": "shopify:\/\/apps\/form-builder-myappgurus\/blocks\/form\/a1074dc9-da75-4be4-856f-aa55cf4ede25",
-          "settings": {
-            "show_form": true,
-            "form_token": "B7DZyQXZF9Rsnz5kkuM9WweLD4EABokA"
-          }
-        }
-      },
-      "block_order": [
-        "0a3c035a-59a4-4354-bef1-8940e618a69d"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
     "image_banner",
-    "featured_collection",
-    "1694126841be786745"
+    "featured_collection"
   ]
 }
