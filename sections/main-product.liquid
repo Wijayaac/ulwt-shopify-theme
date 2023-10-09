@@ -89,6 +89,16 @@
                 </a>
               </div>
             {%- when 'price' -%}
+              {% if product.tags contains 'hide_price' %}
+                true
+                {% else %}
+                false
+              {% endif %}
+              {% if customer.tags contains 'show_price' %}
+                show by customer
+                {% else %}
+                  hide by customer
+              {% endif %}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price',
                   product: product,
