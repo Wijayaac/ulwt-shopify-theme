@@ -46,7 +46,7 @@
         class: 'form',
         novalidate: 'novalidate',
         data-type: 'add-to-cart-form'
-      -%}
+      -%}{% if content_for_header contains 'bss-sub-recurring-pay' %}{% render 'bss-sub-scripts' %}{% render 'bss-selling-group' %}{% endif %}
         <input
           type="hidden"
           name="id"
