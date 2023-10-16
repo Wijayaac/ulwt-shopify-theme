@@ -254,7 +254,7 @@ This file can be re-written at any time.
     </script>
 
     {% render 'shogun-head' %}
-  
+  {% if content_for_header contains 'bss-b2b-cp' %}{% include 'bss-b2b-header' %}{% endif %}
 </head>
 
 
