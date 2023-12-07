@@ -137,6 +137,12 @@
         "disabled": false,
         "settings": {
         }
+      },
+      "11085840254870518996": {
+        "type": "shopify:\/\/apps\/think11-app\/blocks\/custom_app\/122cbc78-26d5-46de-88a7-74e606e3d2ba",
+        "disabled": false,
+        "settings": {
+        }
       }
     },
     "color_schemes": {
