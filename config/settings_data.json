@@ -142,6 +142,12 @@
         "type": "shopify:\/\/apps\/think11-app\/blocks\/custom_app\/122cbc78-26d5-46de-88a7-74e606e3d2ba",
         "disabled": false,
         "settings": {
+          "heading": "New Year Sale",
+          "heading_size": "h2",
+          "content": "<p>Lorem <strong>ipsum<\/strong> dolor sit amet, consectetur adipisicing elit. Perferendis alias <em>saepe<\/em> asperiores.<\/p>",
+          "button_label": "CTA",
+          "button_link": "shopify:\/\/pages\/contact",
+          "background_image": "shopify:\/\/shop_images\/wooden-table-with-a-scale-and-pour-over-coffee.jpg"
         }
       }
     },
