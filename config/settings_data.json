@@ -1,5 +1,6 @@
 {
   "current": {
+    "placeholder_image": "shopify:\/\/shop_images\/home-showcase-2.jpg",
     "logo_width": 90,
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
@@ -136,18 +137,6 @@
         "type": "shopify:\/\/apps\/appstle-subscriptions-app\/blocks\/appstle-subscription-helper\/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
         "disabled": false,
         "settings": {
-        }
-      },
-      "11085840254870518996": {
-        "type": "shopify:\/\/apps\/think11-app\/blocks\/custom_app\/122cbc78-26d5-46de-88a7-74e606e3d2ba",
-        "disabled": false,
-        "settings": {
-          "heading": "New Year Sale",
-          "heading_size": "h2",
-          "content": "<p>Lorem <strong>ipsum<\/strong> dolor sit amet, consectetur adipisicing elit. Perferendis alias <em>saepe<\/em> asperiores.<\/p>",
-          "button_label": "CTA",
-          "button_link": "shopify:\/\/pages\/contact",
-          "background_image": "shopify:\/\/shop_images\/two-black-birds-against-a-white-sky.jpg"
         }
       }
     },
