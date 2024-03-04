@@ -294,11 +294,27 @@
                           lazy_load: lazy_load
                         %}
                       {%- when 'page' -%}
-                        <div class="article-card-wrapper card-wrapper underline-links-hover">
+                        <div class="article-card-wrapper page-card-wrapper card-wrapper underline-links-hover">
                           <div
                             class="card card--card card--text ratio color-{{ settings.blog_card_color_scheme }}"
                             style="--ratio-percent: 100%;"
                           >
+														<div class="card__placeholder">
+															{%- liquid
+																assign image_height = settings.placeholder_image.width | divided_by: settings.placeholder_image.aspect_ratio
+																assign sizes = '200px'
+															-%}
+															{{
+																settings.placeholder_image
+																| image_url: width: 3840
+																| image_tag:
+																	loading: 'lazy',
+																	width: "400px",
+																	height: image_height,
+																	sizes: sizes,
+																	widths: '375, 450'
+															}}
+														</div>
                             <div class="card__content">
                               <div class="card__information">
                                 <h3 class="card__heading">
