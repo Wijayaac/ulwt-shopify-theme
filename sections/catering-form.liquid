@@ -120,7 +120,12 @@
     {% comment %} time {% endcomment %}
     <div class="field">
       <label for="ContactForm-date">* Date ov event</label>
-      <input type="date" id="ContactForm-date" value="{% if form.date %}{{ form.date }}{% endif %}">
+      <input
+        type="date"
+        id="ContactForm-date"
+        name="contact[date]"
+        value="{% if form.date %}{{ form.date }}{% endif %}"
+      >
     </div>
     <div class="field">
       <label for="ContactForm-time">What is this regarding?</label>
