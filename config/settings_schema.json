@@ -8,26 +8,6 @@
     "theme_support_url": "https:\/\/support.shopify.com\/"
   },
   {
-    "name": "search_data",
-    "settings": [
-      {
-        "type": "image_picker",
-        "id": "placeholder_image",
-        "label": "Placeholder Image for search results"
-      }
-    ]
-  },
-  {
-    "name": "Search Settings",
-    "settings": [
-      {
-        "type": "image_picker",
-        "id": "placeholder_image",
-        "label": "Placeholder Image for search results"
-      }
-    ]
-  },
-  {
     "name": "t:settings_schema.logo.name",
     "settings": [
       {
