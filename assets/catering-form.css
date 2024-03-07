@@ -1,0 +1,60 @@
+.upsx-cf .field {
+	margin-bottom: 24px;
+}
+
+.field__input--tall {
+	height: 50px;
+}
+
+.upsx-cf-error {
+	position: absolute;
+	bottom: -16px;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.error .upsx-cf-error {
+	opacity: 1;
+	visibility: visible;
+}
+
+
+@media screen and (min-width: 992px) {
+	.field-full {
+		margin: 8px;
+	}
+
+	.field__input--tall {
+		height: 60px;
+	}
+
+	.upsx-cf-row {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.upsx-cf-row .field {
+		flex: 0 0 49.5%;
+		max-width: 49.5%;
+		margin-left: 8px;
+		margin-right: 8px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+
+	.upsx-cf .field__label {
+		left: 12px;
+	}
+
+	.upsx-cf .field__input:focus~.field__label,
+	.upsx-cf .field__input:not(:placeholder-shown)~.field__label,
+	.upsx-cf .field__input:-webkit-autofill~.field__label,
+	.upsx-cf .customer .field input:focus~label,
+	.upsx-cf .customer .field input:not(:placeholder-shown)~label,
+	.upsx-cf .customer .field input:-webkit-autofill~label {
+		left: 12px;
+	}
+
+}
