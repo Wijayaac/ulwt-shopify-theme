@@ -58,3 +58,20 @@
 	}
 
 }
+
+/* Intl Phone */
+.upsx-cf .field div:empty {
+	display: block;
+}
+
+.upsx-cf .iti {
+	width: 100%;
+}
+
+.upsx-cf .iti__tel-input {
+	padding-top: 1.3rem;
+}
+
+.upsx-cf .iti__tel-input::placeholder {
+	opacity: 1;
+}

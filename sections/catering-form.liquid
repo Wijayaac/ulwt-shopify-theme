@@ -1,21 +1,32 @@
 {{ 'catering-form.css' | asset_url | stylesheet_tag }}
+{{ 'intlTelInput.min.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  #shopify-section-{{ section.id }} {
-    background: {{ section.settings.background }}
+   #shopify-section-{{ section.id }} {
+     background: {{ section.settings.background }}
+   }
+
+  .iti__flag {
+  	background-image: url({{"flags.png" | asset_url}});
   }
 
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  @media (min-resolution: 2x) {
+    .iti__flag {
+  	background-image: url({{"flags@2x.png" | asset_url}});
+  }
   }
 
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
+   .section-{{ section.id }}-padding {
+     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+   }
+
+   @media screen and (min-width: 750px) {
+     .section-{{ section.id }}-padding {
+       padding-top: {{ section.settings.padding_top }}px;
+       padding-bottom: {{ section.settings.padding_bottom }}px;
+     }
+   }
 {%- endstyle -%}
 
 <div
@@ -118,10 +129,8 @@
             value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
             placeholder="{{ 'templates.contact.form.phone' | t }}"
             aria-required="true"
+            required
           >
-          <label class="field__label" for="ContactForm-phone">
-            <span aria-hidden="true">*</span> {{ 'templates.contact.form.phone' | t -}}
-          </label>
           <small class="contact__field-error upsx-cf-error" id="ContactForm-phone-error">
             <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
             <span class="form__message">
@@ -137,7 +146,7 @@
             id="ContactForm-packs"
             class="field__input"
             autocomplete="number"
-            name="contact[packs]"
+            name="contact[Num of packs]"
             pattern="[0-9\-]*"
             value="{% if form.packs %}{{ form.packs }}{% endif %}"
             placeholder="How many packs?"
@@ -212,7 +221,7 @@
           rows="10"
           id="ContactForm-body"
           class="text-area field__input"
-          name="contact[notes]"
+          name="contact[Notes for us]"
           placeholder="Any other notes for us?"
         >
 				{{- form.body -}}
@@ -230,6 +239,15 @@
   {%- endform -%}
 </div>
 <script src="{{ 'catering-form.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'intlTelInput.min.js' | asset_url }}"></script>
+<script>
+  const inputPhone = document.querySelector('#shopify-section-{{section.id}} #ContactForm-phone');
+  window.intlTelInput(inputPhone, {
+    utilsScript: "{{'utils.js' | asset_url }}",
+    initialCountry: 'sg',
+    showSelectedDialCode: true,
+  });
+</script>
 {% schema %}
 {
   "name": "Catering Form",
