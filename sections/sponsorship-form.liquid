@@ -56,24 +56,71 @@
     {%- endif -%}
     <div class="contact__fields">
       <div class="upsx-cf-row">
-        {% comment %} name {% endcomment %}
+        {% comment %} Organization name {% endcomment %}
         <div class="field">
           <input
             class="field__input"
-            autocomplete="name"
+            autocomplete="organization"
             type="text"
-            id="ContactForm-name"
-            name="contact[{{ 'templates.contact.form.name' | t }}]"
+            id="ContactForm-organization"
+            name="contact[Organization Name]"
             value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
-            placeholder="{{ 'templates.contact.form.name' | t }}"
+            placeholder="Organization organization"
             required
             aria-required="true"
           >
-          <label class="field__label" for="ContactForm-name">
+          <label class="field__label" for="ContactForm-organization">
             <span aria-hidden="true">*</span>
-            {{ 'templates.contact.form.name' | t }}
+            Organization Name :
           </label>
-          <small class="contact__field-error upsx-cf-error" id="ContactForm-name-error">
+          <small class="contact__field-error upsx-cf-error" id="ContactForm-organization-name-error">
+            <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+            <span class="form__message">
+              {%- render 'icon-error' -%}
+              This field is required
+            </span>
+          </small>
+        </div>
+        {% comment %} Contact Person {% endcomment %}
+        <div class="field">
+          <input
+            class="field__input"
+            autocomplete="contact-person"
+            type="text"
+            id="ContactForm-contact-person"
+            name="contact[Contact Person]"
+            value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+            placeholder="Contact Person"
+            required
+            aria-required="true"
+          >
+          <label class="field__label" for="ContactForm-contact-person">
+            <span aria-hidden="true">*</span>
+            Contact Person :
+          </label>
+          <small class="contact__field-error upsx-cf-error" id="ContactForm-contact-person-error">
+            <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+            <span class="form__message">
+              {%- render 'icon-error' -%}
+              This field is required
+            </span>
+          </small>
+        </div>
+      </div>
+      <div class="upsx-cf-row">
+        {% comment %} phone {% endcomment %}
+        <div class="field">
+          <input
+            type="tel"
+            id="ContactForm-phone"
+            class="field__input"
+            autocomplete="tel"
+            name="contact[{{ 'templates.contact.form.phone' | t }}]"
+            placeholder="{{ 'templates.contact.form.phone' | t }}"
+            aria-required="true"
+            required
+          >
+          <small class="contact__field-error upsx-cf-error" id="ContactForm-phone-error">
             <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
             <span class="form__message">
               {%- render 'icon-error' -%}
@@ -98,6 +145,7 @@
               aria-describedby="ContactForm-email-error"
             {% endif %}
             placeholder="{{ 'templates.contact.form.email' | t }}"
+            required
           >
           <label class="field__label" for="ContactForm-email">
             <span aria-hidden="true">*</span>
@@ -116,145 +164,106 @@
           </small>
         </div>
       </div>
-      <div class="upsx-cf-row">
-        {% comment %} phone {% endcomment %}
-        <div class="field">
-          <input
-            type="tel"
-            id="ContactForm-phone"
-            class="field__input"
-            autocomplete="tel"
-            name="contact[{{ 'templates.contact.form.phone' | t }}]"
-            value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
-            placeholder="{{ 'templates.contact.form.phone' | t }}"
-            aria-required="true"
-            required
-          >
-          <small class="contact__field-error upsx-cf-error" id="ContactForm-phone-error">
-            <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
-            <span class="form__message">
-              {%- render 'icon-error' -%}
-              This field is required
-            </span>
-          </small>
-        </div>
-        {% comment %} packs {% endcomment %}
-        <div class="field">
-          <input
-            type="number"
-            id="ContactForm-packs"
-            class="field__input"
-            autocomplete="number"
-            name="contact[Num of packs]"
-            pattern="[0-9\-]*"
-            value="{% if form.packs %}{{ form.packs }}{% endif %}"
-            placeholder="How many packs?"
-            aria-required="true"
-            required
-          >
-          <label class="field__label" for="ContactForm-packs"><span aria-hidden="true">*</span>No. of packs</label>
-          <small class="contact__field-error upsx-cf-error" id="ContactForm-packs-error">
-            <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
-            <span class="form__message">
-              {%- render 'icon-error' -%}
-              This field is required
-            </span>
-          </small>
-        </div>
+      {% comment %} Event Details {% endcomment %}
+      <p class="field__note">
+        Please provide a brief description of the event, including its purpose, target audience, and any relevant
+        details (time, date, address, etc.)
+      </p>
+      <div class="field field--full">
+        <input
+          class="field__input"
+          autocomplete="event-details"
+          type="text"
+          id="ContactForm-event-details"
+          name="contact[Event Details]"
+          value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+          placeholder="Event Details"
+          required
+          aria-required="true"
+        >
+        <label class="field__label" for="ContactForm-event-details">
+          <span aria-hidden="true">*</span>
+          Event Details :
+        </label>
+        <small class="contact__field-error upsx-cf-error" id="ContactForm-event-error">
+          <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+          <span class="form__message">
+            {%- render 'icon-error' -%}
+            This field is required
+          </span>
+        </small>
       </div>
 
-      <div class="upsx-cf-row">
-        {% comment %} date {% endcomment %}
-        <div class="field">
-          <input
-            type="date"
-            id="ContactForm-date"
-            class="field__input field__input--tall"
-            name="contact[date]"
-            value="{% if form.date %}{{ form.date }}{% endif %}"
-            aria-required="true"
-            required
-          >
-          <label for="ContactForm-date" class="field__label">* Date of event</label>
-          <small class="contact__field-error upsx-cf-error" id="ContactForm-date-error">
-            <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
-            <span class="form__message">
-              {%- render 'icon-error' -%}
-              This field is required
-            </span>
-          </small>
-        </div>
-        {% comment %} time {% endcomment %}
-        <div class="field">
-          <label for="ContactForm-time"></label>
-          <select
-            id="ContactForm-time"
-            class="field__input  field__input--tall"
-            name="contact[time]"
-            value="{% if form.time %}{{ form.time }}{% endif %}"
-            aria-required="true"
-            required
-          >
-            {% for hour in (6..12) %}
-              {% if hour == 12 %}
-                <option value="{{hour}}PM">{{ hour }}PM</option>
-              {% else %}
-                <option value="{{ hour }}AM">{{ hour }}AM</option>
-              {% endif %}
-            {% endfor %}
-            {% for hour in (1..5) %}
-              <option value="{{hour}}PM">{{ hour }}PM</option>
-            {% endfor %}
-          </select>
-          <label for="ContactForm-time" class="field__label">* Time of event</label>
-          <small class="contact__field-error upsx-cf-error" id="ContactForm-time-error">
-            <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
-            <span class="form__message">
-              {%- render 'icon-error' -%}
-              This field is required
-            </span>
-          </small>
-        </div>
+      {% comment %} Sponsorship Details {% endcomment %}
+      <p class="field__note">
+        Please provide an overview of the sponsorship opportunities you are seeking from The Meat Club, including the
+        benefits and exposure that The Meat Club can expect as a sponsor.
+      </p>
+      <div class="field field--full">
+        <input
+          class="field__input"
+          autocomplete="sponsorship-details"
+          type="text"
+          id="ContactForm-sponsorship-details"
+          name="contact[Sponsorship Details]"
+          value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+          placeholder="Sponsorship Details"
+          required
+          aria-required="true"
+        >
+        <label class="field__label" for="ContactForm-sponsorship-details">
+          <span aria-hidden="true">*</span>
+          Sponsorship Details :
+        </label>
+        <small class="contact__field-error upsx-cf-error" id="ContactForm-sponsorship-error">
+          <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+          <span class="form__message">
+            {%- render 'icon-error' -%}
+            This field is required
+          </span>
+        </small>
       </div>
 
       {% comment %} motes {% endcomment %}
+      <p class="field__note">
+        Please provide any additional information or specific requirements you may have for The Meat Club as a sponsor.
+      </p>
       <div class="field field--full">
         <textarea
           rows="10"
           id="ContactForm-body"
           class="text-area field__input"
-          name="contact[Notes for us]"
-          placeholder="Any other notes for us?"
+          name="contact[Additional Information]"
+          placeholder="Any other Additional Information: "
         >
 				{{- form.body -}}
 			</textarea>
-        <label class="form__label field__label" for="ContactForm-body">
-          Preference on protein, marinades, sauce and dips
-        </label>
+        <label class="form__label field__label" for="ContactForm-body"> Additional Information: </label>
       </div>
     </div>
     <div class="contact__button">
       <input type="hidden" name="contact[Page Referer]" id="page-referer" value="{{ page.title }}">
-      <button type="submit" class="button">
-        {{ 'templates.contact.form.send' | t }}
-      </button>
+      <button type="submit" class="button">Submit</button>
     </div>
   {%- endform -%}
 </div>
 <script src="{{ 'upsx-contact-form.js' | asset_url }}" defer="defer"></script>
+{% # theme-check-disable ParserBlockingJavaScript %}
 <script src="{{ 'intlTelInput.min.js' | asset_url }}"></script>
+{% # theme-check-enable ParserBlockingJavaScript %}
+
 <script>
   const inputPhone = document.querySelector('#shopify-section-{{section.id}} #ContactForm-phone');
   window.intlTelInput(inputPhone, {
     utilsScript: "{{ 'utils.js' | asset_url }}",
     initialCountry: 'sg',
-    autoInsertDialCode: true,
+    autoInsertDialCode: false,
     nationalMode: false,
   });
 </script>
 {% schema %}
 {
-  "name": "Catering Form",
+  "name": "Sponsorship Form",
   "class": "upsx-cf",
   "settings": [
     {

@@ -1,7 +1,7 @@
-const initializeCateringForm = () => {
-  const form = document.querySelectorAll(".upsx-cf-form");
+const initializeContactForm = () => {
+  const forms = document.querySelectorAll(".upsx-cf-form");
 
-  if (!form[0]) {
+  if (!forms[0]) {
     return;
   }
 
@@ -26,5 +26,5 @@ function checkOnBlurFields(fields) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  initializeCateringForm();
+  initializeContactForm();
 });
