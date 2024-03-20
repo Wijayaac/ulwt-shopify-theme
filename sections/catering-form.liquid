@@ -150,6 +150,7 @@
             value="{% if form.packs %}{{ form.packs }}{% endif %}"
             placeholder="How many packs?"
             aria-required="true"
+            required
           >
           <label class="field__label" for="ContactForm-packs"><span aria-hidden="true">*</span>No. of packs</label>
           <small class="contact__field-error upsx-cf-error" id="ContactForm-packs-error">
@@ -172,6 +173,8 @@
             name="contact[date]"
             value="{% if form.date %}{{ form.date }}{% endif %}"
             aria-required="true"
+            required
+            
           >
           <label for="ContactForm-date" class="field__label">* Date of event</label>
           <small class="contact__field-error upsx-cf-error" id="ContactForm-date-error">
@@ -191,6 +194,7 @@
             name="contact[time]"
             value="{% if form.time %}{{ form.time }}{% endif %}"
             aria-required="true"
+            required
           >
             {% for hour in (6..12) %}
               {% if hour == 12 %}
@@ -231,6 +235,7 @@
       </div>
     </div>
     <div class="contact__button">
+      <input type="hidden" name="contact[Page Referer]"  id="page-referer" value="{{ page.title }}" />
       <button type="submit" class="button">
         {{ 'templates.contact.form.send' | t }}
       </button>
