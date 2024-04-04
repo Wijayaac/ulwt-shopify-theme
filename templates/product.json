@@ -49,8 +49,8 @@
             "share_label": "Share"
           }
         },
-        "1aa2918e-3627-44a1-98b5-f7188f2f4176": {
-          "type": "shopify:\/\/apps\/think11-app\/blocks\/custom_price\/122cbc78-26d5-46de-88a7-74e606e3d2ba",
+        "473b31b2-03fb-4ae6-a19b-74db875bd2be": {
+          "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "{{product}}"
           }
@@ -60,12 +60,12 @@
         "vendor",
         "title",
         "price",
+        "473b31b2-03fb-4ae6-a19b-74db875bd2be",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share",
-        "1aa2918e-3627-44a1-98b5-f7188f2f4176"
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -106,10 +106,28 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "25d9b765a5475a7b4639": {
+      "type": "apps",
+      "blocks": {
+        "1ee4b6be-73d1-4009-abcb-6aa285eb879b": {
+          "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "1ee4b6be-73d1-4009-abcb-6aa285eb879b"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
+    "25d9b765a5475a7b4639",
     "related-products",
     "16923204584737734d"
   ]
