@@ -144,6 +144,11 @@
         "type": "shopify://apps/yotpo-product-photo-reviews/blocks/settings/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
         "disabled": false,
         "settings": {}
+      },
+      "6502968457677098879": {
+        "type": "shopify://apps/mbc-bundle-builder/blocks/mbc-builder-core/b2760cbb-20b7-41db-a8ab-c4b55296aac0",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
