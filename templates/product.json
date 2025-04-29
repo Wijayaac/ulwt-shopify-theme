@@ -59,6 +59,10 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "onyou_onyou_popup_wqz7YM": {
+          "type": "shopify://apps/onyou/blocks/onyou-popup/3379e12f-b2ef-4ba9-a9e9-5ea9425840ef",
+          "settings": {}
         }
       },
       "block_order": [
@@ -70,7 +74,8 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "onyou_onyou_popup_wqz7YM"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -86,6 +91,12 @@
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 12
+      }
+    },
+    "1738699849298086ac": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
       }
     },
     "25d9b765a5475a7b4639": {
@@ -125,23 +136,6 @@
     },
     "16923204584737734d": {
       "type": "apps",
-      "settings": {
-        "include_margins": true
-      }
-    },
-    "1738699849298086ac": {
-      "type": "apps",
-      "blocks": {
-        "mbc_bundle_builder_mbc_builder_widget_b7YJrG": {
-          "type": "shopify://apps/mbc-bundle-builder/blocks/mbc-builder-widget/b2760cbb-20b7-41db-a8ab-c4b55296aac0",
-          "settings": {
-            "builder_id": ""
-          }
-        }
-      },
-      "block_order": [
-        "mbc_bundle_builder_mbc_builder_widget_b7YJrG"
-      ],
       "settings": {
         "include_margins": true
       }
