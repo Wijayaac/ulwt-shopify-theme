@@ -59,15 +59,6 @@
           "settings": {
             "share_label": "Share"
           }
-        },
-        "auglio_cosmetic_vto_tryon_button_ab_rtCmqh": {
-          "type": "shopify://apps/auglio-cosmetic-vto/blocks/tryon-button-ab/a806c098-e07f-4e3c-b421-abccb5b51916",
-          "settings": {
-            "product": "{{product}}",
-            "btn_text": "Try On",
-            "full_width": false,
-            "extra_classes": ""
-          }
         }
       },
       "block_order": [
@@ -79,8 +70,7 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share",
-        "auglio_cosmetic_vto_tryon_button_ab_rtCmqh"
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,

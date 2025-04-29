@@ -147,7 +147,7 @@
       },
       "2742242026626736055": {
         "type": "shopify://apps/auglio-cosmetic-vto/blocks/legacy-aeb/a806c098-e07f-4e3c-b421-abccb5b51916",
-        "disabled": false,
+        "disabled": true,
         "settings": {}
       }
     },
