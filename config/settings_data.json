@@ -145,10 +145,13 @@
         "disabled": false,
         "settings": {}
       },
-      "2742242026626736055": {
-        "type": "shopify://apps/auglio-cosmetic-vto/blocks/legacy-aeb/a806c098-e07f-4e3c-b421-abccb5b51916",
-        "disabled": true,
-        "settings": {}
+      "3678330922655817062": {
+        "type": "shopify://apps/boost-ai-search-filter/blocks/boost-sd-ssr/7fc998ae-a150-4367-bab8-505d8a4503f7",
+        "disabled": false,
+        "settings": {
+          "templateId": "143742337319",
+          "productGridSelector": ""
+        }
       }
     },
     "color_schemes": {

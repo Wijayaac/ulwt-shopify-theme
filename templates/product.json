@@ -131,6 +131,19 @@
     },
     "16923204584737734d": {
       "type": "apps",
+      "blocks": {
+        "boost_ai_search_filter_recommendation_ssr_KEHLxF": {
+          "type": "shopify://apps/boost-ai-search-filter/blocks/recommendation-ssr/7fc998ae-a150-4367-bab8-505d8a4503f7",
+          "settings": {
+            "widgetId": "productpage-774257",
+            "additional_classes": "",
+            "custom_css": ""
+          }
+        }
+      },
+      "block_order": [
+        "boost_ai_search_filter_recommendation_ssr_KEHLxF"
+      ],
       "settings": {
         "include_margins": true
       }
